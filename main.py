@@ -129,8 +129,8 @@ layout = go.Layout(
     ),
     annotations=[
         dict(
-            x=0.50,
-            y=-0.1,
+            x=0.71,
+            y=0.04,
             showarrow=False,
             text='© 2018 XavierdeBondt',
             xref='paper',
