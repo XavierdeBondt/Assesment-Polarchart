@@ -1,0 +1,6 @@
+# Ignore person input and output
+*.xlsm
+*.html
+
+# Ignore built pycache
+__pycache__/
