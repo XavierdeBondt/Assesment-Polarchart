@@ -1,5 +1,7 @@
 # Assesment Polarchart
-Creation of the assesment polarchart using the `plot.ly` python library and `xlrd` to read from an excel file.
+Creation of the assesment polarchart using the `plot.ly` python library and `xlrd` to read from an excel file.    
+An example of such a polarchart is given below
+![alt text](example.png "Example polarchart")
 
 ## Prerequisites
 To use this project we expect the user to be using `python` with `xlrd` and `plotly` installed. For installation use     
