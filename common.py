@@ -85,11 +85,11 @@ for i in range(row_firstvalues, sheet.nrows):
 rlist = []
 for j in range(bigparts):
     values = []
-    minimum = indexcounter[j] - 1
+    minimum = indexcounter[j]
     if j == (bigparts - 1):
-        maximum = sheet.nrows - 1 - row_firstvalues
+        maximum = sheet.nrows  - row_firstvalues
     else :
-        maximum = indexcounter[j+1] - 1
+        maximum = indexcounter[j+1]
     # Add zero's in front and behind so we can use Scatterpolar
     for i in range(minimum, maximum):
         values.append(0)
@@ -149,3 +149,5 @@ if(bigparts < 6):
         rlist.append([])
         tlist.append([])
 
+print(percentages)
+print(rlist)

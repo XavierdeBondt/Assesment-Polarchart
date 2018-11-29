@@ -7,6 +7,7 @@ import common
 
 # Creation of the outer-pie/donut 
 bigtrace = go.Pie(labels=common.biglabels, values=common.bigvalues,
+               sort=False,
                visible=True,
                showlegend=False,
                textinfo='label', 
@@ -20,6 +21,7 @@ bigtrace = go.Pie(labels=common.biglabels, values=common.bigvalues,
 
 # Creation of the inner-pie/donut
 smalltrace = go.Pie(labels=common.smalllabels, values=common.smallvalues, text=common.smalltexts,
+               sort=False,
                showlegend=False,
                textinfo='text', 
                textposition='inside',
