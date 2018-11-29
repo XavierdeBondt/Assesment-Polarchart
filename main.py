@@ -132,9 +132,13 @@ layout = go.Layout(
     ),
     annotations=[
         dict(
-            x=0.71,
-            y=0.04,
+            x=0.50,
+            y=0.077,
             showarrow=False,
+            font = dict(
+                size=9,
+                color='#D3D3D3'
+            ),
             text='© 2018 XavierdeBondt',
             xref='paper',
             yref='paper'

@@ -148,6 +148,3 @@ if(bigparts < 6):
         bigcolors.append(bigcolors[0])
         rlist.append([])
         tlist.append([])
-
-print(percentages)
-print(rlist)
