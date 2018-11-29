@@ -2,12 +2,16 @@
 *.xlsm
 *.html
 
+# Unignore the template!
+!template.xlsm
+
 # Ignore built pycache
 __pycache__/
 
 # Ignore built .exe files and creation files
 # Note: We use Pyinstaller
 main.spec
+plotly/
 build/
 dist/
 
