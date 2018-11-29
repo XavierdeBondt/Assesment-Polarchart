@@ -4,3 +4,15 @@
 
 # Ignore built pycache
 __pycache__/
+
+# Ignore built .exe files and creation files
+# Note: We use Pyinstaller
+main.spec
+build/
+dist/
+
+# Also ignore any zip files (that are distributed among users)
+*.zip
+
+# Ignore any temporaryfiles
+*.tmp
