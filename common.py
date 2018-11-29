@@ -65,8 +65,10 @@ for i in range(bigparts):
 
 # Get all the small labels
 smalllabels = []
+smalltexts=[]
 for i in range(row_firstvalues, sheet.nrows):
-    smalllabels.append(sheet.cell_value(i,column_slicename))
+    smalltexts.append(sheet.cell_value(i,column_slicename))
+    smalllabels.append(sheet.cell_value(i,column_slicename)+str(i))
 
 # Converts to a color scheme for the small donut
 smallcolors = []
@@ -105,8 +107,10 @@ for i in range(row_firstvalues, sheet.nrows):
     value = sheet.cell_value(i,column_sliceamount)
     slicesum = slicesum + value
     smallvalues.append(value) 
+
 for i in range(len(smallvalues)):
     slicepercentages.append(smallvalues[i] / slicesum)
+
 
 # Percentage of 360 degrees to angles
 angles = []
@@ -114,7 +118,6 @@ angle = 0
 for i in range(len(slicepercentages)):
     angle = angle + slicepercentages[i]*360
     angles.append(angle)
-
 # Convert angles to a 2D-array
 tlist = []
 for j in range(bigparts):

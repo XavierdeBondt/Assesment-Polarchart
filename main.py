@@ -19,16 +19,16 @@ bigtrace = go.Pie(labels=common.biglabels, values=common.bigvalues,
                            line=dict(color='#000000', width=1)))
 
 # Creation of the inner-pie/donut
-smalltrace = go.Pie(labels=common.smalllabels, values=common.smallvalues,
+smalltrace = go.Pie(labels=common.smalllabels, values=common.smallvalues, text=common.smalltexts,
                showlegend=False,
-               textinfo='label', 
+               textinfo='text', 
                textposition='inside',
                hole = 0.90,
                domain = {"x": [0.02, 0.98],
                          "y": [0.02, 0.98]},
                direction = 'clockwise',
                insidetextfont = dict(size = 10),
-               marker=dict(colors=common.smallcolors, 
+               marker=dict(colors=common.smallcolors,
                            line=dict(color='#000000', width=1)))
 
 # Creation of the polar-data (max 6)
@@ -108,6 +108,7 @@ layout = go.Layout(
         radialaxis = dict(
             visible = True,
             range = [0,100],
+            angle=90,
             ticksuffix='%',
             tickmode="array",
             tickvals=[0,25,50,75,100] # It will always be percentages
