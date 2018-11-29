@@ -118,6 +118,8 @@ angle = 0
 for i in range(len(slicepercentages)):
     angle = angle + slicepercentages[i]*360
     angles.append(angle)
+# Create radialangle
+radialangle = 90 - int(slicesum / 4)*angles[0]
 # Convert angles to a 2D-array
 tlist = []
 for j in range(bigparts):
