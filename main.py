@@ -170,7 +170,8 @@ fig = go.Figure(data, layout=layout)
 
 from tkinter import filedialog
 filename = filedialog.asksaveasfile(mode='w', defaultextension=".html")
-if filename is not None: # User wants to save
-    # Creation of the figure
-    plotly.offline.plot(fig, filename=filename.name)
+if filename is None:
+    raise SystemExit
+# Creation of the figure
+plotly.offline.plot(fig, filename=filename.name, image='jpeg')
 filename.close()

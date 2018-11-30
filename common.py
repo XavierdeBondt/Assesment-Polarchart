@@ -7,6 +7,8 @@ root.withdraw()
 
 # Ask for file as input
 file_path = filedialog.askopenfilename()
+if file_path ==  '':
+    raise SystemExit
 # Path of excel input file
 loc = (file_path)
 
