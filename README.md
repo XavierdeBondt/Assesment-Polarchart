@@ -18,10 +18,10 @@ As a template we have included `template.xlsm` to show how the excel file should
 $ python main.py
 ```
 
-[py-home](https://www.python.org/ Python's Homepage)
-[xlrd-home](https://pypi.org/project/xlrd/ Project xlrd)
-[plotly-home](https://plot.ly/ Plotly Homepage)
-[psutil-home](https://pypi.org/project/psutil/ Project psutil)
-[orca-home](https://plot.ly/python/orca-management/ Orca)
-[orca-installguide](https://plot.ly/python/static-image-export/#install-dependencies Plotly static image install)
+[py-home]:https://www.python.org/
+[xlrd-home]:https://pypi.org/project/xlrd/
+[plotly-home]:https://plot.ly/
+[psutil-home]:https://pypi.org/project/psutil/
+[orca-home]:https://plot.ly/python/orca-management/
+[orca-installguide]:https://plot.ly/python/static-image-export/#install-dependencies
 
