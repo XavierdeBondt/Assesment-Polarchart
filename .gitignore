@@ -1,6 +1,8 @@
 # Ignore person input and output
 *.xlsm
 *.html
+*.pdf
+*.jpeg
 
 # Unignore the template!
 !template.xlsm

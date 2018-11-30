@@ -4,11 +4,13 @@ An example of such a polarchart is given below
 ![alt text](example.png "Example polarchart")
 
 ## Prerequisites
-To use this project we expect the user to be using `python` with `xlrd` and `plotly` installed. For installation use     
+To use this project we expect the user to be using [python][py-home] with [xlrd][xlrd-home], [plotly][plotly-home] , [psutil][psutil-home] and [orca][orca-home] installed. For installation use     
 ```
 $ pip install xlrd
 $ pip install plotly
+$ pip install psutil
 ```
+For the installation of `orca` [click here!][orca-installguide] 
 
 ## Running the project
 As a template we have included `template.xlsm` to show how the excel file should be built. To use this template with the program, rename it to `input.xlsm` and make sure it is in the same folder as `main.py`. The project can then be run by using
@@ -16,5 +18,10 @@ As a template we have included `template.xlsm` to show how the excel file should
 $ python main.py
 ```
 
-
+[py-home](https://www.python.org/ Python's Homepage)
+[xlrd-home](https://pypi.org/project/xlrd/ Project xlrd)
+[plotly-home](https://plot.ly/ Plotly Homepage)
+[psutil-home](https://pypi.org/project/psutil/ Project psutil)
+[orca-home](https://plot.ly/python/orca-management/ Orca)
+[orca-installguide](https://plot.ly/python/static-image-export/#install-dependencies Plotly static image install)
 

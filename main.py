@@ -167,11 +167,11 @@ layout = go.Layout(
 data = polardata + [smalltrace, bigtrace]
 fig = go.Figure(data, layout=layout)
 
-
 from tkinter import filedialog
-filename = filedialog.asksaveasfile(mode='w', defaultextension=".html")
-if filename is None:
+import plotly.io as pio
+filename = filedialog.asksaveasfilename()
+if filename is "":
     raise SystemExit
-# Creation of the figure
-plotly.offline.plot(fig, filename=filename.name, image='jpeg')
-filename.close()
+# Write to pdf and html file!
+pio.write_image(fig, filename + ".pdf")
+plotly.offline.plot(fig, filename=filename + ".html")
