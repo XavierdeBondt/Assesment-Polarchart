@@ -167,5 +167,10 @@ layout = go.Layout(
 data = polardata + [smalltrace, bigtrace]
 fig = go.Figure(data, layout=layout)
 
-# Creation of the figure
-plotly.offline.plot(fig, filename='assesment_polarchart.html')
+
+from tkinter import filedialog
+filename = filedialog.asksaveasfile(mode='w', defaultextension=".html")
+if filename is not None: # User wants to save
+    # Creation of the figure
+    plotly.offline.plot(fig, filename=filename.name)
+filename.close()

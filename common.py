@@ -1,7 +1,14 @@
 import xlrd
+import tkinter as tk
+from tkinter import filedialog
 
+root = tk.Tk()
+root.withdraw()
+
+# Ask for file as input
+file_path = filedialog.askopenfilename()
 # Path of excel input file
-loc = ("input.xlsm")
+loc = (file_path)
 
 # Open workbook's first sheet
 wb = xlrd.open_workbook(loc)
