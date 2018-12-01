@@ -172,6 +172,8 @@ import plotly.io as pio
 filename = filedialog.asksaveasfilename()
 if filename is "":
     raise SystemExit
-# Write to pdf and html file!
-pio.write_image(fig, filename + ".pdf")
-plotly.offline.plot(fig, filename=filename + ".html")
+# Write to jpg and html file!
+#pio.write_image(fig, filename + ".jpeg", width=1100, height=700, scale=1)
+import ntpath
+plotly.offline.plot(fig, filename=filename + ".html", 
+                    image="jpeg", image_filename=ntpath.basename(filename), image_width=1100, image_height=700)
