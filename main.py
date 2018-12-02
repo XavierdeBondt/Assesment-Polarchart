@@ -167,13 +167,25 @@ layout = go.Layout(
 data = polardata + [smalltrace, bigtrace]
 fig = go.Figure(data, layout=layout)
 
+# Relative path location of orca for usage with pyinstaller
+import sys
+import os
+orca_folder = 'orca'
+# Determine if application is a script file or frozen exe
+if getattr(sys, 'frozen', False):
+    application_path = os.path.dirname(sys.executable)
+elif __file__:
+    application_path = os.path.dirname(__file__)
+orca_path = os.path.join(application_path, orca_folder)
+os.environ['PATH'] = os.pathsep.join([os.environ['PATH'], orca_path])
+
 from tkinter import filedialog
 import plotly.io as pio
 filename = filedialog.asksaveasfilename()
 if filename is "":
     raise SystemExit
 # Write to jpg and html file!
-#pio.write_image(fig, filename + ".jpeg", width=1100, height=700, scale=1)
+pio.write_image(fig, filename + ".jpeg", width=1100, height=700, scale=1)
 import ntpath
 plotly.offline.plot(fig, filename=filename + ".html", 
                     image="jpeg", image_filename=ntpath.basename(filename), image_width=1100, image_height=700)

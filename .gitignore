@@ -1,10 +1,11 @@
 # Ignore person input and output
+output/
 *.xlsm
 *.html
 *.pdf
 *.jpeg
 
-# Unignore the template!
+# Unignore the excel template!
 !template.xlsm
 
 # Ignore built pycache
@@ -12,10 +13,13 @@ __pycache__/
 
 # Ignore built .exe files and creation files
 # Note: We use Pyinstaller
-main.spec
+*.spec
 plotly/
 build/
 dist/
+
+# Unignore the pyinstaller template!
+!template.spec
 
 # Also ignore any zip files (that are distributed among users)
 *.zip
