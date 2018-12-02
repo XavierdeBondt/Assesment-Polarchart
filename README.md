@@ -17,7 +17,10 @@ As a template we have included `template.xlsm` to show how the excel file should
 ```
 $ python main.py
 ```
+## Using Pyinstaller
+To use [pyinstaller][pyinstaller-home], we created a custom `template.spec` file that you can use in order to ensure that the `plotly`, `psutil` and `orca` libraries are includes in the dist folder. Ensure to edit the `template.spec` file so that the paths are valid.
 
+[pyinstaller-home]:https://www.pyinstaller.org/
 [py-home]:https://www.python.org/
 [xlrd-home]:https://pypi.org/project/xlrd/
 [plotly-home]:https://plot.ly/
