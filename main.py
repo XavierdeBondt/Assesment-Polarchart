@@ -139,7 +139,7 @@ layout = go.Layout(
                 size=9,
                 color='#D3D3D3'
             ),
-            text='© 2018 XavierdeBondt',
+            text='© 2019 XavierdeBondt',
             xref='paper',
             yref='paper'
         ),
